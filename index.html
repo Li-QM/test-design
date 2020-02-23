@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+		<!-- Page CSS -->
+		<link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(./images/nature-1.jpg)">
+            </div>
+            <div class="swiper-slide" style="background-image:url(./images/nature-2.jpg)">
+            </div>
+            <div class="swiper-slide" style="background-image:url(./images/nature-3.jpg)">
+            </div>
+            <div class="swiper-slide" style="background-image:url(./images/nature-4.jpg)">
+            </div>
+            <div class="swiper-slide" style="background-image:url(./images/nature-5.jpg)">
+            </div>
+        </div>
+
+        <div class="swiper-pagination swiper-pagination-yellow">
+        </div>
+
+        <a class="skip-btn" href="javascript:openLogin();">SKIP</a>
+
+        <div class="bottom-box" style="display: block">
+            <div class="gallery-thumbs" style="position: relative; bottom: 9rem;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide thumb-body">
+                        <h1>NEVER LOSE THE BEST PARTS OF ARTICLES</h1>
+                        <P>Highlights your favourite parts of articles and keep them in one place</P>
+                    </div>
+                    <div class="swiper-slide thumb-body">
+                        <h1>NEVER LOSE THE BEST PARTS OF ARTICLES</h1>
+                        <P>Highlights your favourite parts of articles and keep them in one place</P>
+                    </div>
+                    <div class="swiper-slide thumb-body">
+                        <h1>NEVER LOSE THE BEST PARTS OF ARTICLES</h1>
+                        <P>Highlights your favourite parts of articles and keep them in one place</P>
+                    </div>
+                    <div class="swiper-slide thumb-body">
+                        <h1>NEVER LOSE THE BEST PARTS OF ARTICLES</h1>
+                        <P>Highlights your favourite parts of articles and keep them in one place</P>
+                    </div>
+                    <div class="swiper-slide thumb-body-last">
+                        <h1>READ, DISCOVER AND CONNECT DEEPER ON SOCIAL MEDIA</h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+			var galleryThumbs = new Swiper('.gallery-thumbs', {
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			});
+
+			var swiper = new Swiper('.swiper-container', {
+				spaceBetween: 30,
+				effect: 'fade',
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				thumbs: {
+					swiper: galleryThumbs
+				}
+			});
+
+			var openLogin = function () {
+				document.getElementsByClassName('swiper-pagination-bullet')[4].click();
+			}
+    </script>
+</body>
+
+</html>
